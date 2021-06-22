@@ -280,4 +280,4 @@ djangogram/media/
 
 .pytest_cache/
 
-
+secrets.json

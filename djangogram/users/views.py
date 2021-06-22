@@ -18,7 +18,7 @@ def main(request):
         if user is not None:
             login(request, user)
             # Redirect to a success page.
-            return HttpResponseRedirect(reverse('post:index'))
+            return HttpResponseRedirect(reverse('posts:index'))
         
         else:
         # Return an 'invalid login' error message.

@@ -30,7 +30,7 @@ class Comment(TimeStamedModel):
                 user_model.User,
                 null=True,
                 on_delete=models.CASCADE, # 외래키를 갖는 특정유저가 삭제되면 어떻게 처리가 될 것인가를 알려주는 옵션
-                related_name='post_author'
+                related_name='comment_author'
             )
     posts = models.ForeignKey(
                 Post,

@@ -15,7 +15,11 @@ urlpatterns = [
     # User management
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+
+    # /
     path("", include("djangogram.users.urls", namespace="users")),
+    # /posts/
+    path("posts/", include("djangogram.posts.urls", namespace="posts")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

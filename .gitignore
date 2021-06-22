@@ -264,6 +264,16 @@ Session.vim
 # Auto-generated tag files
 tags
 
+### VirtualEnv template
+# Virtualenv
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+pyvenv.cfg
+pip-selfcheck.json
+.env
+
 ### Project template
 
 djangogram/media/

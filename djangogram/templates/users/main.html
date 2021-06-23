@@ -1,5 +1,8 @@
-Here is main.html
+{% extends "users/base.html" %}
 
+<h1>Here is SignIn(Login) page</h1>
+
+{% block content %}
 <form action="{% url 'users:main' %}" method='post'>
     {% csrf_token %}
     <input type='username' name='username' placeholder="username">
@@ -7,3 +10,5 @@ Here is main.html
     <input type='submit' value='Login'>    
 </form>
 
+<a href="{% url 'users:signup' %}">Sign up</a>
+{% endblock content %}

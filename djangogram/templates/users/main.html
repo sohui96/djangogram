@@ -6,12 +6,36 @@ Log in
 {% endblock title %}
 
 {% block content %}
-<form action="{% url 'users:main' %}" method='post'>
-    {% csrf_token %}
-    <input type='username' name='username' placeholder="username">
-    <input type='password' name='password' placeholder="password">
-    <input type='submit' value='Login'>    
-</form>
+<div class="auth">
+    <h1 class="auth-heading">Djangogram</h1>
+    <form action="{% url 'users:main' %}" method='post'>
+        {% csrf_token %}
+        <div class="auth-login1">
+            <input type='username' name='username' placeholder="전화번호, 사용자 이름 또는 이메일">
+        </div>
 
-<a href="{% url 'users:signup' %}">Sign up</a>
+        <div class="auth-login2">
+            <input type='password' name='password' placeholder="비밀번호">
+        </div>
+
+        <!-- checkbox 추가 -->
+        <div class="auth-login-checkbox">
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Remember me
+            </label>
+        </div>
+
+        <div class="auth-login3">
+            <button type='submit'>로그인</button>
+        </div>
+    </form>
+
+</div>
+
+<div class="auth_link">
+    <p>
+        계정이 없으신가요?
+        <a href="{% url 'users:signup' %}">가입하기</a>
+    </p>
+</div>
 {% endblock content %}

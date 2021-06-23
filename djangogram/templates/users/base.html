@@ -1,19 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}Djangogram</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/users/main.css' %}">
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    Here is base.html
-    <div>
+    <div class="content">
         <!-- content block 태그에 로그인과 가입화면 
         이 부분만 변경되고 타이틀과 푸터는 고정-->
         {% block content %} {% endblock %}
     </div>
+
     {% include "users/footer.html" %}
-    
 </body>
 </html>

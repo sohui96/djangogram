@@ -2,7 +2,7 @@
 Base settings to build other settings files upon.
 """
 from pathlib import Path
-from os import environ
+import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # djangogram/
@@ -41,7 +41,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres://postgres:root@localhost:5432/djangogram"),
+    "default": env.db("DATABASE_URL", default="postgres://postgres:0429@localhost:5432/djangogram"),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 

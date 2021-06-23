@@ -1,6 +1,9 @@
 {% extends "users/base.html" %}
 
 <h1>Here is SignIn(Login) page</h1>
+{% block title %}
+Log in
+{% endblock title %}
 
 {% block content %}
 <form action="{% url 'users:main' %}" method='post'>
